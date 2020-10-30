@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Cards
+    </title>
+<link rel="apple-touch-icon" sizes="144x144" href="/toxin/build/assets/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/toxin/build/assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/toxin/build/assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="/toxin/build/assets/favicons/site.webmanifest">
+<link rel="mask-icon" href="/toxin/build/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <link href="cards.css" rel="stylesheet"></head>
+  <body>
+    <div class="logo-wrapper">
+<div class="container">
+  <div class="logo"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill="#1F2041" fill-opacity="0.25"/>
+<path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill="#1F2041" fill-opacity="0.25"/>
+<path d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill="#1F2041" fill-opacity="0.25"/>
+</svg>
+  </div>
+</div>
+    </div>
+    <div class="container">
+      <div class="cards__wrapper">
+        <div class="cards__column">
+          <div class="cards__item">
+            <div class="find-apartments__items">
+              <div class="find-apartments__item">
+                <h1 class="cards__title">Найдем номера под ваши пожелания</h1>
+                <form class="find-apartments__form" action="/mock-address" method="get">
+                  <div class="datepicker-field">
+                    <div class="datepicker-field--left">
+                      <h3 class="datepicker-field__title">Прибытие</h3>
+                      <div class="datepicker--left">
+                        <input class="text-field--datepicker text-field-datepicker--left" placeholder="ДД.ММ.ГГГГ" type="text" name="start" id="startDate" readonly><i class="material-icons--left-datepicker">expand_more</i>
+                      </div>
+                    </div>
+                    <div class="datepicker-field--right">
+                      <h3 class="datepicker-field__title">Выезд</h3>
+                      <div class="datepicker--right">
+                        <input class="text-field--datepicker text-field-datepicker--right" placeholder="ДД.ММ.ГГГГ" type="text" name="end" id="endDate" readonly><i class="material-icons--left-datepicker">expand_more</i>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="find-apartments__item">
+                <h3 class="find-apartments__subtitle">Гости</h3>
+              </div>
+              <div class="find-apartments__dropdown">
+                <form action="">
+                  <div class="form-elements__input--dropdown">
+                    <input class="text-field--dropdown" placeholder="Сколько гостей" readonly="readonly"><i class="material-icons">expand_more</i>
+                  </div>
+                  <div class="dropdown__menu">
+                    <div class="dropdown__menu-option" data-id="item-adult">
+                      <div class="dropdown__item">Взрослые</div>
+                      <div class="dropdown__controls">
+                        <div class="dropdown__minus"></div>
+                        <div class="dropdown__count">0</div>
+                        <div class="dropdown__plus"></div>
+                      </div>
+                    </div>
+                    <div class="dropdown__menu-option" data-id="item-children">
+                      <div class="dropdown__item">Дети</div>
+                      <div class="dropdown__controls">
+                        <div class="dropdown__minus"></div>
+                        <div class="dropdown__count">0</div>
+                        <div class="dropdown__plus"></div>
+                      </div>
+                    </div>
+                    <div class="dropdown__menu-option" data-id="item-babies">
+                      <div class="dropdown__item">Младенцы</div>
+                      <div class="dropdown__controls">
+                        <div class="dropdown__minus"></div>
+                        <div class="dropdown__count">0</div>
+                        <div class="dropdown__plus"></div>
+                      </div>
+                    </div>
+                    <div class="dropdown__buttons" data-id="item-btn">
+                      <button class="clear-btn">Очистить</button>
+                      <button class="apply-btn">Применить</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="find-apartments__item">
+                <button class="find-apartments__button long-button">Подобрать номер<i class="long-button__icon">arrow_forward</i></button>
+              </div>
+            </div>
+          </div>
+          <div class="cards__item">
+            <div class="register__items">
+              <div class="register">
+                <h1 class="cards__title">Регистрация аккаунта</h1>
+                <div>
+                  <input class="cards__field--name text-field" type="text" id="text-field-" placeholder="Имя">
+                </div>
+                <div>
+                  <input class="cards__field--surname text-field" type="text" id="text-field-" placeholder="Фамилия">
+                </div>
+                <div class="register__gender">
+                  <div class="form-elements__radio">
+                    <label class="marker__descr marker__descr--female" for="male-btn">Мужской
+                      <input class="gender-btn" type="radio" id="male-btn" name="gender" checked>
+                      <div class="radio__marker"></div>
+                    </label>
+                  </div>
+                  <div class="form-elements__radio">
+                    <label class="marker__descr marker__descr--male" for="female-btn">Женский
+                      <input class="gender-btn" type="radio" id="female-btn" name="gender">
+                      <div class="radio__marker"></div>
+                    </label>
+                  </div>
+                </div>
+                <div class="register__birthday">
+                  <h3 class="datepicker-field__title">дата рождения</h3>
+                  <div>
+                    <input class="register__birthday--field text-field" type="text" id="text-field-" placeholder="ДД.ММ.ГГГГ">
+                  </div>
+                </div>
+                <div class="register__service">
+                  <h3 class="datepicker-field__title">данные для входа в сервис</h3>
+                  <div>
+                    <input class="register__service--email text-field" type="email" id="text-field-" placeholder="Email">
+                  </div>
+                  <div>
+                    <input class="register__service--password text-field" type="password" id="text-field-" placeholder="Пароль">
+                  </div>
+                  <div class="form-elements__toggle">
+                    <label class="toggle__descr" for="register__service--toggle">Получать спецпредложения
+                      <input class="toggle-btn" type="checkbox" id="register__service--toggle" name="toggle">
+                      <div class="toggle__marker"></div>
+                    </label>
+                  </div>
+                </div>
+                <div class="register__button">
+                  <button class="register__button--long long-button">перейти к оплате<i class="long-button__icon">arrow_forward</i></button>
+                </div>
+                <div class="register__account">
+                  <div class="account__text">Уже есть аккаунт на Toxin</div>
+                  <div class="account__button">
+                    <button class="rounded-button">Войти</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cards__column">
+          <div class="cards__item">
+            <div class="booking__items">
+              <div class="booking__item">
+                <div class="booking__item--apartment">
+                  <div class="apartment__info"><span class="apartment__number">№</span><span class="apartment__number apartment__number--large"> 888</span><span class="apartment__text"> люкс</span></div>
+                  <div class="price"><span class="price__number">9 990₽</span><span class="price__text"> в сутки</span></div>
+                </div>
+              </div>
+              <div class="booking__item">
+                <form class="find-apartments__form" action="/mock-address" method="get">
+                  <div class="datepicker-field">
+                    <div class="datepicker-field--left">
+                      <h3 class="datepicker-field__title">Прибытие</h3>
+                      <div class="datepicker--left">
+                        <input class="text-field--datepicker text-field-datepicker--left" placeholder="ДД.ММ.ГГГГ" type="text" name="start" id="startDate" readonly><i class="material-icons--left-datepicker">expand_more</i>
+                      </div>
+                    </div>
+                    <div class="datepicker-field--right">
+                      <h3 class="datepicker-field__title">Выезд</h3>
+                      <div class="datepicker--right">
+                        <input class="text-field--datepicker text-field-datepicker--right" placeholder="ДД.ММ.ГГГГ" type="text" name="end" id="endDate" readonly><i class="material-icons--left-datepicker">expand_more</i>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="booking__item">
+                <div class="find-apartments__item">
+                  <h3 class="find-apartments__subtitle">Гости</h3>
+                </div>
+                <div class="find-apartments__dropdown">
+                  <form action="">
+                    <div class="form-elements__input--dropdown">
+                      <input class="text-field--dropdown" placeholder="3 гостя" readonly="readonly"><i class="material-icons">expand_more</i>
+                    </div>
+                    <div class="dropdown__menu">
+                      <div class="dropdown__menu-option" data-id="item-adult">
+                        <div class="dropdown__item">Взрослые</div>
+                        <div class="dropdown__controls">
+                          <div class="dropdown__minus"></div>
+                          <div class="dropdown__count">0</div>
+                          <div class="dropdown__plus"></div>
+                        </div>
+                      </div>
+                      <div class="dropdown__menu-option" data-id="item-children">
+                        <div class="dropdown__item">Дети</div>
+                        <div class="dropdown__controls">
+                          <div class="dropdown__minus"></div>
+                          <div class="dropdown__count">0</div>
+                          <div class="dropdown__plus"></div>
+                        </div>
+                      </div>
+                      <div class="dropdown__menu-option" data-id="item-babies">
+                        <div class="dropdown__item">Младенцы</div>
+                        <div class="dropdown__controls">
+                          <div class="dropdown__minus"></div>
+                          <div class="dropdown__count">0</div>
+                          <div class="dropdown__plus"></div>
+                        </div>
+                      </div>
+                      <div class="dropdown__buttons" data-id="item-btn">
+                        <button class="clear-btn">Очистить</button>
+                        <button class="apply-btn">Применить</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="booking__item">
+                <div class="invoice__item">
+                  <div class="invoice">
+                    <div class="invoice__row">
+                      <div class="invoice__service">9 990₽ х 4 суток</div>
+                      <div class="invoice__sum">39 960₽</div>
+                    </div>
+                    <div class="invoice__row">
+                      <div class="invoice__service invoice__service_with-icon">Сбор за услуги: скидка 2 179₽</div>
+                      <div class="invoice__sum">0₽</div>
+                    </div>
+                    <div class="invoice__row">
+                      <div class="invoice__service  invoice__service_with-icon">Сбор за дополнительные услуги</div>
+                      <div class="invoice__sum">300₽</div>
+                    </div>
+                    <div class="invoice__row invoice__row_font_large">
+                      <h2 class="invoice__block">Итого</h2>
+                      <div class="invoice__line"></div>
+                      <h2 class="invoice__block">38 081₽</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="booking__item">
+                <button class="booking__button--long long-button">забронировать<i class="long-button__icon">arrow_forward</i></button>
+              </div>
+            </div>
+          </div>
+          <div class="cards__item">
+            <div class="enter__items">
+              <div class="enter__item">
+                <h1 class="cards__title">Войти</h1>
+                <div>
+                  <input class="register__service--email text-field" type="email" id="text-field-" placeholder="Email">
+                </div>
+                <div>
+                  <input class="register__service--password text-field" type="password" id="text-field-" placeholder="Пароль">
+                </div>
+              </div>
+              <div class="enter__item">
+                <button class="enter__button--long long-button">войти<i class="long-button__icon">arrow_forward</i></button>
+              </div>
+              <div class="enter__item">
+                <div class="register__account">
+                  <div class="enter__text">Нет аккаунта на Toxin?</div>
+                  <div class="enter__button">
+                    <button class="rounded-button">создать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cards__column">
+          <div class="cards__item">
+            <div class="text-field-datepicker--left"></div>
+          </div>
+          <div class="cards__item">
+            <div class="gallery__items">
+              <div class="gallery">
+                <div class="gallery__image"><img src="/toxin/build/assets/images/gallery-1.png" alt="apartment photo">
+                  <div class="gallery__left-arrow gallery__arrow"><i class="gallery__icon material-icons">keyboard_arrow_left</i></div>
+                  <div class="gallery__right-arrow gallery__arrow"><i class="gallery__icon material-icons">keyboard_arrow_left</i></div>
+                  <div class="gallery__point-container">
+                    <div class="gallery__point gallery__point_filled"></div>
+                    <div class="gallery__point"></div>
+                    <div class="gallery__point"></div>
+                    <div class="gallery__point"></div>
+                  </div>
+                </div>
+                <div class="gallery__body">
+                  <div class="gallery__info">
+                    <div class="booking__item--apartment">
+                      <div class="apartment__info"><span class="apartment__number">№</span><span class="apartment__number apartment__number--large"> 888</span><span class="apartment__text"> люкс</span></div>
+                      <div class="price"><span class="price__number">9 990₽</span><span class="price__text"> в сутки</span></div>
+                    </div>
+                  </div>
+                  <div class="gallery__rating">
+                    <div class="form-elements__rate 145"><i class="rating__icon">star</i><i class="rating__icon">star</i><i class="rating__icon">star</i><i class="rating__icon">star</i><i class="rating__icon">star</i></div>
+                    <div class="gallery__rating--comments">
+                      <div class="gallery__rating--text gallery__rating--bold">Отзывов</div>
+                      <div class="gallery__rating--descr"> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gallery">
+                <div class="gallery__image"><img src="/toxin/build/assets/images/gallery-2.png" alt="apartment photo">
+                  <div class="gallery__left-arrow gallery__arrow"><i class="gallery__icon material-icons">keyboard_arrow_left</i></div>
+                  <div class="gallery__right-arrow gallery__arrow"><i class="gallery__icon material-icons">keyboard_arrow_left</i></div>
+                  <div class="gallery__point-container">
+                    <div class="gallery__point gallery__point_filled"></div>
+                    <div class="gallery__point"></div>
+                    <div class="gallery__point"></div>
+                    <div class="gallery__point"></div>
+                  </div>
+                </div>
+                <div class="gallery__body">
+                  <div class="gallery__info">
+                    <div class="booking__item--apartment">
+                      <div class="apartment__info"><span class="apartment__number">№</span><span class="apartment__number apartment__number--large"> 840</span><span class="apartment__text"> </span></div>
+                      <div class="price"><span class="price__number">9 990₽</span><span class="price__text"> в сутки</span></div>
+                    </div>
+                  </div>
+                  <div class="gallery__rating">
+                    <div class="form-elements__rate 65"><i class="rating__icon">star</i><i class="rating__icon">star</i><i class="rating__icon">star</i><i class="rating__icon">star</i><i class="rating__icon">star</i></div>
+                    <div class="gallery__rating--comments">
+                      <div class="gallery__rating--text gallery__rating--bold">Отзывов</div>
+                      <div class="gallery__rating--descr"> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="./assets/js/cards.js"></script></body>
+</html>

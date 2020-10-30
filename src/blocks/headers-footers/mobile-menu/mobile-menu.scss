@@ -1,0 +1,48 @@
+.menu{
+    &__container{
+        display: none;
+
+        @media (max-width: 780px){
+            display: flex;
+        }
+    }
+}
+
+.mobile__menu{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    background: white;
+    padding: 10px;
+    border-radius: 6px;
+    max-width: 300px;
+    width: 100%;
+    margin-top: 208px;
+
+    &--icon{
+        font-size: 20px;
+        color: rgba(31, 32, 65, 0.5);
+
+        @media (max-width: 780px){
+            display: flex;
+            cursor: pointer;
+            padding-right: 20px;
+        }
+
+        @media (min-width: 780px){
+            display: none;
+        }
+    }
+
+    &--open{
+        display: flex;
+        z-index: 1;
+    }
+}
+
+.header__account{
+    @media (max-width: 780px){
+        display: none;
+    }
+}

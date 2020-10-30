@@ -1,0 +1,9 @@
+mixin bulletCard(titleOne, titleTwo, titleThree)
+    ul(class="bullet")
+        +bulletList(titleOne)
+        +bulletList(titleTwo)
+        +bulletList(titleThree)
+
+mixin bulletList(title)
+    li(class="bullet__elem")
+        span(class="bullet__item") #{title}

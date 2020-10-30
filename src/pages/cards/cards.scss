@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #e5e5e5;
+}
+
+.container{
+    max-width: 1160px;
+    width: 100%;
+    margin: auto;
+}
+
+.logo{
+    margin: 30px 0 72px;
+}
+
+.cards__wrapper{
+    display: flex;
+    justify-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cards__column{
+    margin: 0 10px;
+}
+
+.cards__item{
+    max-width: 380px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.find-apartments__items{
+    height: 374px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px 30px 0px 30px;
+}
+
+//первая карточка - поиск апартаментов
+
+.cards__title{
+    width: 320px;
+    font-family: 'Quicksand-Bold', 'OpenSans-Bold';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1F2041;
+    padding-bottom: 20px;
+}
+
+.datepicker-field__title{
+    font-family: 'Montserrat-Bold', 'OpenSans-Bold';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+    padding-bottom: 6px;
+}
+
+.datepicker-field{
+    display: flex;
+    flex-direction: row;
+}
+
+.datepicker-field--left, .datepicker-field--right{
+    display: flex;
+    flex-direction: column;
+}
+
+.find-apartments__subtitle{
+    width: 43px;
+    font-family: 'Montserrat-Bold', 'OpenSans-Bold';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+    padding: 20px 0 5px 0;
+}
+
+.find-apartments__button{
+    margin-top: 31px;
+}
+
+// вторая карточка - регистрация аккаунта
+.register__items{
+    height: 646px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px 30px 0px 30px;
+}
+
+.cards__field--name{
+    margin-bottom: 10px;
+}
+
+.register__gender{
+    display: flex;
+    margin-top: 10px;
+}
+
+.register__birthday, .register__service{
+    margin-top: 20px;
+}
+
+.register__service--password, .register__service--toggle{
+    margin-top: 25px;
+}
+
+.register__button--long{
+    margin-top: 15px;
+}
+
+.register__account{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.account__text{
+    width: 186px;
+    font-family: 'Montserrat-Regular', 'OpenSans-Regular', 'sans-serif';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000;
+}
+
+.account__button{
+    position: relative;
+    z-index: 1;
+}
+
+.rounded-button{
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    font-family: 'Montserrat-Bold', 'OpenSans-Bold', 'sans-serif';
+    color: #bc9cff;
+    border-radius: 22px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    line-height: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+    user-select: none;
+    background-color: #fff;
+    height: 40px;
+    padding: 0 25px;
+}
+
+.rounded-button::after {
+    display: inherit;
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    z-index: -1;
+    border-radius: 22px;
+    background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}

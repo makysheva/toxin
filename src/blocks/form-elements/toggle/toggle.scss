@@ -1,0 +1,65 @@
+// Toggle
+
+.form-elements__toggle-wrapper{
+    margin-top: 16px;
+}
+
+.form-elements__toggle{
+    margin-top: 10px;
+    margin-bottom: 14px;
+}
+
+.toggle__descr{
+    font-family: 'Montserrat-Regular', 'OpenSans-Regular', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+}
+
+.toggle-btn {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.toggle-btn:checked ~ .toggle__marker {
+    border-color: #bc9cff;
+}
+
+.toggle-btn:checked ~ .toggle__marker::after {
+    transform: translateX(20px);
+    background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+
+.toggle__marker{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 40px;
+    height: 20px;
+    border: 1px solid rgba(31,32,65,0.25);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.toggle__marker:after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    top: 3px;
+    left: 4px;
+    border-radius: 50%;
+    background-color: rgba(31,32,65,0.25);
+    transition: 0.3s;
+}
+
+.toggle__descr {
+    padding-left: 3.6em;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}

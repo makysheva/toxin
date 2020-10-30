@@ -1,0 +1,11 @@
+mixin radioButton(forInput, labelClassName, title, idInput, checked)
+    if checked
+        .form-elements__radio
+            label(for= forInput, class="marker__descr " +labelClassName) #{title}
+                input(type="radio", class="gender-btn", id= idInput, name="gender", checked)
+                div(class="radio__marker")
+    else
+        .form-elements__radio
+            label(for= forInput, class="marker__descr " +labelClassName) #{title}
+                input(type="radio", class="gender-btn", id= idInput, name="gender")
+                div(class="radio__marker")

@@ -1,0 +1,15 @@
+.registration__container{
+    background-image: url("~images/registration-background.png");
+    background-position-x: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -41px 0 0 0;
+}
+
+.cards__item{
+    display: flex;
+    align-self: flex-start;
+    margin-top: 55px;
+}

@@ -1,0 +1,26 @@
+.landing__container {
+    background-image: url("~images/landing-background.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: -41px 0 0 0;
+    padding-top: 70px;
+    padding-left: 100px;
+    height: 890px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.landing__text{
+    width: 297px;
+    font-family: 'Montserrat-Regular', 'OpenSans-Regular', 'sans-serif';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+    color: rgba(31, 32, 65, 0.75);
+    margin: 0 96px 28px 0;
+    align-self: flex-end;
+}

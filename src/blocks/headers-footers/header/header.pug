@@ -1,0 +1,56 @@
+include ../../form-elements/buttons/buttons
+include ../../headers-footers/menu/menu
+include ../mobile-menu/mobile-menu
+
+mixin header(dataType)
+    .header__wrapper
+        .header__item--register
+            .logo-wrapper
+                include ../../logo/logo-main
+            .header__menu--register
+                nav.menu
+                    ul.menu__list
+                        -
+                            let menuList = [
+                                {title: "О нас", link: "#", showFooter: true,},
+                                {title: "Услуги", link: "#",showFooter: true,
+                                    subnav: [{title: "item 1", link: "#",}, {title: "item 2",link: "#",}]},
+                                {title: "Вакансии", link: "#", showFooter: true,},
+                                {title: "Новости", link: "#", showFooter: true,},
+                                {title: "Соглашения", link: "#", showFooter: true,
+                                    subnav: [{title: "item 1", link: "#",},{title: "item 2",link: "#",}]},
+                            ]
+
+                        each element in menuList
+                            +elementMenu(element)
+
+                nav.menu__container
+                    ul.mobile__menu
+                        -
+                            let mobileMenuList = [
+                                {title: "О нас", link: "#", showFooter: true,},
+                                {title: "Услуги", link: "#",showFooter: true,
+                                    subnav: [{title: "item 1", link: "#",}, {title: "item 2",link: "#",}]},
+                                {title: "Вакансии", link: "#", showFooter: true,},
+                                {title: "Новости", link: "#", showFooter: true,},
+                                {title: "Соглашения", link: "#", showFooter: true,
+                                    subnav: [{title: "item 1", link: "#",},{title: "item 2",link: "#",}]},
+                            ]
+
+                        each element in mobileMenuList
+                            +mobileMenu(element)
+
+                .mobile__menu--icon.js-mobile__menu
+                    i(class="fa fa-bars" aria-hidden="true")
+
+                .mobile__user
+                    i(class="fa fa-user-circle-o" aria-hidden="true")
+
+                if (dataType === 'headerRegister')
+                    .header__button
+                        +button('rounded-button', 'Войти')
+                        +button('button', 'Зарегистрироваться')
+
+                else if (dataType === 'headerRegistered')
+                    .header__account
+                        div.user__account Юлий Цезарь

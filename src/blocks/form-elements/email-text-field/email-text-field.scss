@@ -1,0 +1,30 @@
+// поле отправки почты
+
+.form-elements__email-field{
+    display: flex;
+    flex-direction: row;
+    width: 267px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.text-field--email{
+    width: 223px;
+    outline: none;
+    border: none;
+    padding: 13px 0 13px 15px;
+}
+
+.material-icons--email{
+    width: 44px;
+    font-family: 'Material Icons', 'OpenSans-Regular', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    background-size: cover;
+    color: #bc9cff;
+    text-align: center;
+}

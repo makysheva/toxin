@@ -1,0 +1,40 @@
+.index {
+    &__descr{
+        text-align: center;
+        font-family: 'Montserrat-Regular', 'OpenSans-Regular', 'sans-serif';
+        margin: 50px 0 25px 0;
+        font-weight: normal;
+    }
+
+    &__title{
+        text-align: center;
+        font-family: 'Montserrat-Bold', 'OpenSans-Bold', 'sans-serif';
+        margin: 10px 0;
+        font-weight: bolder;
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 363px;
+        width: 100%;
+        border: 1px solid rgba(31, 32, 65, 0.75);
+        border-radius: 12px;
+        margin: auto;
+    }
+
+    &__link{
+        padding: 15px 0 15px 0;
+        text-decoration: none;
+        color: rgba(31, 32, 65, 0.5);
+        text-transform: uppercase;
+        font-size: 20px;
+        font-family: 'Montserrat-Regular', 'OpenSans-Regular', sans-serif;
+        font-weight: normal;
+
+        &:hover{
+            color: rgba(31, 32, 65, 0.75);
+        }
+    }
+}

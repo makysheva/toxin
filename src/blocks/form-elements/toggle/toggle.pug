@@ -1,0 +1,11 @@
+mixin toggle(forInput, title, idInput, checked)
+    if checked
+        .form-elements__toggle
+            label(for= forInput, class="toggle__descr") #{title}
+                input(type="checkbox", class="toggle-btn", id= idInput, name="toggle", checked)
+                div(class="toggle__marker")
+    else
+        .form-elements__toggle
+            label(for= forInput, class="toggle__descr") #{title}
+                input(type="checkbox", class="toggle-btn", id= idInput, name="toggle")
+                div(class="toggle__marker")

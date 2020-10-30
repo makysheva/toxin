@@ -1,0 +1,7 @@
+mixin richCheckbox(idIcon, forInput, title, idInput, inputDataType, descr)
+    div(class="rich-checkbox__wrapper")
+        div(class="checkbox__marks")
+            i(class="fa fa-check checkbox__mark", aria-hidden="true", id= idIcon)
+        label(class="rich-checkbox rich-checkbox__title", for= forInput) #{title}
+            input(class="rich-checkbox__input", type="checkbox", id= idInput, data-type= inputDataType)
+            div(class="rich-checkbox__descr") #{descr}

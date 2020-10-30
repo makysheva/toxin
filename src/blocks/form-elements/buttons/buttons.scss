@@ -1,0 +1,135 @@
+.form-elements__buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.form-elements__btn {
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    color: #fff;
+    background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    border-radius: 22px;
+    padding: 0 20px;
+    line-height: 34px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    height: 34px;
+    letter-spacing: .6px;
+}
+
+.button_disabled{
+    opacity: 0.5;
+    cursor: auto;
+}
+
+.rounded-button{
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    font-family: 'Montserrat-Bold', 'OpenSans-Bold', sans-serif;
+    color: #bc9cff;
+    border-radius: 22px;
+    border: none;
+    padding: 0 18px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+    user-select: none;
+    background-color: #fff;
+    margin-right: 11px;
+}
+
+.rounded-button::after {
+    display: inherit;
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    z-index: -1;
+    border-radius: 22px;
+    background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+
+.rounded-button_disabled{
+    cursor: auto;
+}
+
+.rounded-button::after {
+    display: inherit;
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    z-index: -1;
+    border-radius: 22px;
+    background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+
+.simple-button{
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #bc9cff;
+    cursor: pointer;
+    font-family: 'Montserrat-Bold', 'OpenSans-Bold', sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.simple-button_disabled{
+    cursor: default;
+    color: rgba(31,32,65,0.5);
+}
+
+.long-button{
+    position: relative;
+    display: inline-block;
+    font-family: 'Montserrat-Bold', 'OpenSans-Bold', sans-serif;
+    color: #fff;
+    background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    border: none;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 22px;
+    padding: 0 18px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: bolder;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    width: 320px;
+}
+
+.long-button__icon {
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.5rem;
+    display: inline-block;
+    line-height: .7rem;
+    text-transform: none;
+}

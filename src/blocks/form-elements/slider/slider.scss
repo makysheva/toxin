@@ -1,0 +1,72 @@
+
+.form-elements__slider-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.range-slider-wrapper{
+    display: flex;
+}
+
+.range-slider__range{
+    display: block;
+    width: 88px;
+    height: 6px;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 3px;
+}
+
+.range-slider {
+    position: relative;
+    height: 80px;
+}
+
+.extra-controls{
+    display: inline;
+}
+
+.extra-controls__title{
+    border: 0;
+    outline: none;
+    max-width: 51px;
+    width: 100%;
+    font-family: 'Montserrat-Regular', 'OpenSans-Regular', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: rgba(31, 32, 65, 0.5);
+}
+
+// стилизация ползунков
+.left-toddler{
+    top: 28px !important;
+    width: 16px !important;
+    height: 16px !important;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%) !important;
+    border: 2px solid #FFFFFF !important;
+    border-radius: 10px !important;
+}
+
+.right-toddler{
+    top: 28px !important;
+    width: 16px !important;
+    height: 16px !important;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%) !important;
+    border: 2px solid #FFFFFF !important;
+    border-radius: 10px !important;
+}
+
+.toddler{
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 3px;
+}
+
+.line-all{
+    background: #FFFFFF !important;
+    border: 1px solid rgba(31, 32, 65, 0.25) !important;
+    box-sizing: border-box !important;
+    border-radius: 3px !important;
+}

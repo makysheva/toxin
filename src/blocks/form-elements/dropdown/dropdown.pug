@@ -1,0 +1,42 @@
+include ../text-field/text-field
+
+mixin dropdownCard(mainTitle, dropdownTitle, titleControls1, titleControls2, titleControls3, titleControls4, titleControls5, titleControls6)
+    .form-elements__dropdown
+        form(action="")
+            +formElementsHeader(mainTitle)
+            .form-elements__input--dropdown
+                +dropdown(dropdownTitle)
+
+            div(class="dropdown__menu")
+                if(titleControls1 === 'Взрослые')
+                    +dropdownControls('adults', titleControls1)
+                if(titleControls2 === 'Дети')
+                    +dropdownControls('children', titleControls2)
+
+                if(titleControls3 === 'Младенцы')
+                    +dropdownControls('babies', titleControls3)
+
+                if(titleControls4 === 'Спальни')
+                    +dropdownControls('bedrooms', titleControls4)
+
+                if(titleControls5 === 'Кровати')
+                    +dropdownControls('beds', titleControls5)
+
+                if(titleControls6 === 'Ванные комнаты')
+                    +dropdownControls('bathroom', titleControls6)
+
+                div(class="dropdown__buttons" data-id="item-btn")
+                    button(class="clear-btn") Очистить
+                    button(class="apply-btn") Применить
+
+mixin dropdown(placeholder)
+    input(class="text-field--dropdown", placeholder= placeholder, readonly="readonly")
+    i(class="material-icons") expand_more
+
+mixin dropdownControls(dataId, title)
+    div(class="dropdown__menu-option" data-id= dataId)
+        .dropdown__item #{title}
+        div(class="dropdown__controls")
+            .dropdown__minus
+            .dropdown__count 0
+            .dropdown__plus

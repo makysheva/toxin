@@ -1,0 +1,16 @@
+mixin textField(text, forInput)
+    .form-elements__descr
+        label(for="text-field-" + forInput) #{text}
+
+//-если есть модификатор у класса, то НЕ добавлять этому инпуту idInput
+mixin inputField(divClassName, modificator, inputFieldClassName, idInput, inputType, email)
+    if modificator
+        div(class= divClassName + modificator)
+            input(type= inputType, class= '' + inputFieldClassName, placeholder= email)
+    else
+        div(class=divClassName)
+            input(type= inputType, class= '' + inputFieldClassName, id= 'text-field-' + idInput, placeholder= email)
+
+mixin formElementsHeader(descr)
+    .form-elements__descr
+        span #{descr}

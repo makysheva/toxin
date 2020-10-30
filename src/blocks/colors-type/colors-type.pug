@@ -1,0 +1,11 @@
+mixin rectangleInfo(colorsClassName, title)
+    .rectangle__items
+        .rectangle(class= 'rectangle--' + colorsClassName)
+        .rectangle__title
+            .rectangle-descr(class= 'rectangle-descr--' + colorsClassName)
+                span #{title}
+
+mixin widgetsInfo(widget, widgetTitle, descr, widgetDescr)
+    .widget__wrapper
+        .widget.widget-items(class= 'widget-title--' + widget)= widgetTitle
+        .widget-item(class= 'widget-descr--' + descr)= widgetDescr

@@ -1,0 +1,48 @@
+extends ../../base
+include ../../blocks/headers-footers/header/header
+include ../../blocks/headers-footers/menu/menu
+include ../../blocks/form-elements/buttons/buttons
+include ../../blocks/cards/register-account-card/register-account-card
+include ../../blocks/headers-footers/footer/footer
+
+block title
+    | Registration
+
+block registration-section
+    +header('headerRegister')
+
+    .registration__container
+        +registerAccountCard()
+
+    .registration__footer
+        +footer({
+            navigation: [
+                {
+                    title: "Навигация",
+                    links: [
+                    { url: "/mock-address", text: "О нас" },
+                    { url: "/mock-address", text: "Новости" },
+                    { url: "/mock-address", text: "Служба поддержки" },
+                    { url: "/mock-address", text: "Услуги" },
+                    ]
+                },
+                {
+                    title: "О нас",
+                    links: [
+                    { url: "/mock-address", text: "О сервисе" },
+                    { url: "/mock-address", text: "Наша команда" },
+                    { url: "/mock-address", text: "Вакансии" },
+                    { url: "/mock-address", text: "Инвесторы" },
+                    ]
+                },
+                {
+                    title: "Служба поддержки",
+                    links: [
+                    { url: "/mock-address", text: "Соглашения" },
+                    { url: "/mock-address", text: "Сообщества" },
+                    { url: "/mock-address", text: "Связь с нами" },
+                    ]
+                },
+            ]
+        })
+

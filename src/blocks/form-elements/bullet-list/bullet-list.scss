@@ -1,0 +1,30 @@
+.bullet {
+    list-style: none;
+    line-height: 1.54em;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-end: 0;
+    list-style-position: inside;
+    margin-top: 16px;
+}
+
+.bullet__elem {
+    position: relative;
+    padding-left: 19px;
+    padding-bottom: 14px;
+    color: rgba(31,32,65,0.75);
+    font-family: 'Montserrat-Regular', 'OpenSans-Regular', sans-serif;
+    font-size: 0.875rem;
+}
+
+.bullet__elem::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -1px;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(31,32,65,0.25);
+    border-radius: 50%;
+}

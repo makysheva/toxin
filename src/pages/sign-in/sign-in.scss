@@ -1,0 +1,21 @@
+
+.signIn__container{
+    background-image: url(../../assets/img/registration-background.png);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -41px 0 0 0;
+}
+
+.cards__item{
+    display: flex;
+    align-self: flex-start;
+    margin-top: 170px;
+}
+
+.enter__item{
+    padding-bottom: 20px;
+}

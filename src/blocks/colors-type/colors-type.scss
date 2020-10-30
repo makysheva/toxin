@@ -1,0 +1,166 @@
+/*section rectangles pages colorsandtype*/
+.rectangles {
+    margin-bottom: 20px;
+
+    &__wrapper{
+        margin-top: 67px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media (max-width: 700px){
+            justify-content: center;
+        }
+    }
+}
+
+.container{
+    @media (max-width: 1200px){
+        max-width: 100%;
+        margin: 20px;
+    }
+}
+
+.rectangle {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+
+    &__items{
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__title{
+        padding: 8px 0 40px 40px;
+    }
+
+    &--dark {
+        background: #1F2041;
+    }
+
+    &--dimgrey {
+        background: rgba(31, 32, 65, 0.75);
+    }
+
+    &--silver {
+        background: rgba(31, 32, 65, 0.5);
+    }
+
+    &--lightgrey {
+        background: rgba(31, 32, 65, 0.25);
+    }
+
+    &--smokywhite {
+        background: rgba(31, 32, 65, 0.05);
+    }
+
+    &--purple {
+        background: #BC9CFF;
+    }
+
+    &--green {
+        background: #6FCF97;
+    }
+
+    &-descr {
+        width: 159px;
+        height: 57px;
+        font-family: 'Quicksand-Bold', sans-serif;
+        font-style: normal;
+        font-weight: bolder;
+        font-size: 19px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+
+        &--purple {
+            width: 82px;
+        }
+
+        &--green {
+            width: 77px;
+        }
+    }
+}
+
+
+/*section Widgets pages colorsandtype*/
+.widget {
+    font-family: 'Montserrat-Regular', 'Quicksand-Regular', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    color: rgba(31, 32, 65, 0.25);
+
+    &__wrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    &-item {
+        font-family: 'Quicksand-Bold', sans-serif;
+        font-style: normal;
+        font-weight: bolder;
+        color: #1F2041;
+        padding: 0 0 60px 20px;
+    }
+}
+
+.widget-descr{
+    &--h1 {
+        width: 336px;
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    &--h2 {
+        width: 282px;
+        font-size: 19px;
+        line-height: 24px;
+    }
+
+    &--h3 {
+        width: 186px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    &--body {
+        width: 301px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+.widget-title{
+    &--h1 {
+        width: 29px;
+        height: 30px;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    &--h2 {
+        width: 27px;
+        height: 24px;
+        font-size: 19px;
+        line-height: 23px;
+    }
+
+    &--h3 {
+        width: 17px;
+        height: 15px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    &--body {
+        width: 37px;
+        height: 24px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}

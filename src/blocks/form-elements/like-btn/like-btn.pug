@@ -1,0 +1,8 @@
+mixin likeButton(countLike, typeLike, likeActiveClassName, iconClassName)
+    if likeActiveClassName
+        div(class="like " +likeActiveClassName) #{countLike}
+            i(class="like__icon " +iconClassName) #{typeLike}
+
+    else
+        div(class="like") #{countLike}
+            i(class="like__icon") #{typeLike}

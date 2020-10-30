@@ -1,0 +1,56 @@
+// Like Buttons
+.form-elements__like-wrapper{
+    margin-top: 16px;
+}
+
+.like {
+    display: inline-block;
+    position: relative;
+    background-color: #fff;
+    color: rgba(31,32,65,0.25);
+    cursor: pointer;
+    padding: 3px 10px 3px 20px;
+    border-radius: 10px;
+    font-size: .625rem;
+    line-height: .75rem;
+    user-select: none;
+    margin-right: 10px;
+}
+
+.like__icon {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: .625rem;
+    display: inline-block;
+    line-height: .7rem;
+    text-transform: none;
+}
+
+.like__icon--active{
+    color: #bc9cff;
+}
+
+.like__icon--active::after {
+    background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+
+.like::after {
+    content: '';
+    display: inherit;
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    background-color: rgba(31,32,65,0.25);
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.like--active{
+    color: #bc9cff;
+}

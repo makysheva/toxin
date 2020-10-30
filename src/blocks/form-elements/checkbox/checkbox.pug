@@ -1,0 +1,28 @@
+include ../text-field/text-field
+
+mixin checkboxCard()
+    .form-elements__checkbox-wrapper
+        form(action="")
+            +formElementsHeader('Checkbox Buttons')
+            .checkboxs
+                +checkbox('', 'mark-smoke', 'checkbox-smoke', 'Можно курить', 'checkbox-smoke', 'smoke')
+                +checkbox('', 'mark-nursling', 'checkbox-nursling', 'Можно с питомцами', 'checkbox-nursling', 'nursling')
+                +checkbox('checkbox__marks--long-text', 'mark-guests', 'checkbox-guests', 'Можно пригласить гостей (до 10 человек)', 'checkbox-guests', 'guests')
+
+
+
+mixin checkbox(divClassName, idIcon, forInput, title, idInput, inputDataType)
+    if divClassName
+        .form-elements__checkbox
+            .js-checkbox
+                div(class="checkbox__marks " + divClassName)
+                    i(class="fa fa-check checkbox__mark", aria-hidden="true", id= idIcon)
+                label(for= forInput, class="checkbox-descr") #{title}
+                    input(class="checkbox", type="checkbox", id= idInput, data-type= inputDataType)
+    else
+        .form-elements__checkbox
+            .js-checkbox
+                div(class="checkbox__marks")
+                    i(class="fa fa-check checkbox__mark", aria-hidden="true", id= idIcon)
+                label(for= forInput, class="checkbox-descr") #{title}
+                    input(class="checkbox", type="checkbox", id= idInput, data-type= inputDataType)

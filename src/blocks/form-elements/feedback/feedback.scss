@@ -1,0 +1,119 @@
+.form-elements--bottom{
+    position: absolute;
+    top: 1216px;
+    left: 515px;
+    max-width: 709px;
+    width: 100%;
+
+    @media (max-width: 1200px){
+        position: initial;
+    }
+
+    @media (max-width: 700px){
+        max-width: 500px;
+        width: 100%;
+    }
+}
+
+.feedback{
+    &__avatar-wrapper{
+        margin: 0 10px 12px 0;
+    }
+
+    &__avatar{
+        width: 48px;
+        height: 48px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        box-shadow: 0px 10px 20px rgba(31,32,65,0.1);
+    }
+
+    &__author {
+        padding-top: 0.143em;
+        font-family: 'Montserrat-Bold', 'OpenSans-Bold', sans-serif;
+        font-weight: bolder;
+
+        &-wrapper{
+            margin-top: 4px;
+        }
+    }
+
+    &__like{
+        margin-right: 8px;
+    }
+
+    &__date{
+        font-family: 'Montserrat-Regular', 'OpenSans-Regular';
+        font-style: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+    }
+
+    &__text {
+        line-height: 1.72em;
+        margin-top: 2px;
+        font-family: 'Montserrat-Regular', 'OpenSans-Regular';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+    }
+
+    &__wrapper{
+        display: flex;
+    }
+}
+
+.like {
+    display: inline-block;
+    position: relative;
+    background-color: #fff;
+    color: rgba(31, 32, 65, 0.25);
+    cursor: pointer;
+    padding: 3px 10px 3px 20px;
+    border-radius: 10px;
+    font-size: .625rem;
+    line-height: .75rem;
+    user-select: none;
+    margin-right: 10px;
+
+    &_liked {
+        color: #bc9cff;
+
+        &::after {
+            background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 4px;
+        left: 5px;
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: .625rem;
+        display: inline-block;
+        line-height: .7rem;
+        text-transform: none;
+
+        &_liked {
+            color: #bc9cff;
+        }
+    }
+
+    &::after {
+        content: '';
+        display: inherit;
+        position: absolute;
+        top: -1px;
+        bottom: -1px;
+        left: -1px;
+        right: -1px;
+        background-color: rgba(31,32,65,0.25);
+        z-index: -1;
+        border-radius: 10px;
+    }
+}

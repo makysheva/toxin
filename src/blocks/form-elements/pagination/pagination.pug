@@ -1,0 +1,12 @@
+mixin paginationCard()
+    .pagination
+        +pagination('pagination__item pagination__item_active', '/mock-address', '1')
+        +pagination('pagination__item', '/mock-address', '2')
+        +pagination('pagination__item', '/mock-address', '3')
+        div(class="pagination__item") ...
+        +pagination('pagination__item', '/mock-address', '15')
+        button(class="pagination__next")
+        div(class="pagination__info") 1 – 12 из 100+ вариантов аренды
+
+mixin pagination(linkClassName, href, title)
+    a(class= linkClassName, href= href) #{title}

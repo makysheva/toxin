@@ -1,0 +1,28 @@
+mixin expanderCard(title, hidedClassName)
+    if hidedClassName
+        div(class="expander")
+            div(class="expander__header js-expander") #{title}
+                i.expander__checkmark.checkmark.checkmark__down
+            div(class="expander__list " + hidedClassName)
+                +expander('mark-breakfast--open', 'Завтрак', 'checkbox-breakfast--open', 'expander-breakfast--open')
+
+    else
+        div(class="expander")
+            div(class="expander__header js-expander " + hidedClassName) #{title}
+                i.expander__checkmark.checkmark.checkmark__down
+            div(class="expander__list")
+                +expander('mark-breakfast--opens', 'Завтрак', 'checkbox-breakfast--opens', 'expander-breakfast--opens')
+                +expander('mark-desk', 'Письменный стол', 'checkbox-desk', 'expander-desk')
+                +expander('mark-feeding-chair', 'Стул для кормления', 'checkbox-feeding-chair', 'expander-feeding-chair')
+                +expander('mark-cot', 'Кроватка', 'checkbox-cot', 'expander-cot')
+                +expander('mark-tv', 'Телевизор', 'checkbox-tv', 'expander-tv')
+                +expander('mark-shampoo', 'Шампунь', 'checkbox-shampoo', 'expander-shampoo')
+
+mixin expander(idIcon, title, idInput, inputDataType)
+    div(class="expander__wrapper")
+        div(class="checkbox__marks")
+            i(class="fa fa-check checkbox__mark" aria-hidden="true" id= idIcon)
+        div(class="expander__checkbox")
+            label(class="checkbox" for= idInput) #{title}
+                input(class="checkbox__input", type="checkbox", checked="", id= idInput, data-type= inputDataType)
+                div(class="checkbox__mark")

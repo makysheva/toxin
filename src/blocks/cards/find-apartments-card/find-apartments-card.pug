@@ -1,0 +1,38 @@
+include ../cards-title/cards-title
+include ../../form-elements/calendar/calendar
+include ../../form-elements/dropdown/dropdown
+include ../../form-elements/buttons/buttons
+
+mixin findApartmentsCard()
+    .cards__item
+        .find-apartments__items
+            .find-apartments__item
+                +title('cards__title', 'Найдем номера под ваши пожелания')
+
+                form(class="find-apartments__form" action="/mock-address" method="get")
+                    .datepicker-field
+                        .datepicker-field--left
+                            +subtitle('datepicker-field__title', 'Прибытие')
+                            +datepickerLeft('text-field--datepicker text-field-datepicker--left', 'ДД.ММ.ГГГГ', 'startDate', 'start', 'material-icons--left-datepicker', 'expand_more')
+                        .datepicker-field--right
+                            +subtitle('datepicker-field__title', 'Выезд')
+                            +datepickerRight('text-field--datepicker text-field-datepicker--right', 'ДД.ММ.ГГГГ', 'endDate', 'end', 'material-icons--left-datepicker', 'expand_more')
+
+            .find-apartments__item
+                +subtitle('find-apartments__subtitle', 'Гости')
+            .find-apartments__dropdown
+                form(action="")
+                    .form-elements__input--dropdown
+                        +dropdown('Сколько гостей')
+
+                    div(class="dropdown__menu")
+                        +dropdownControls('item-adult', 'Взрослые', '-', '0', '+')
+                        +dropdownControls('item-children', 'Дети', '-', '0', '+')
+                        +dropdownControls('item-babies', 'Младенцы', '-', '0', '+')
+
+                        div(class="dropdown__buttons" data-id="item-btn")
+                            button(class="clear-btn") Очистить
+                            button(class="apply-btn") Применить
+
+            .find-apartments__item
+                +longButton('find-apartments__button long-button', 'Подобрать номер', 'long-button__icon', 'arrow_forward')

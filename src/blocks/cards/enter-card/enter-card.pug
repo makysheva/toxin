@@ -1,0 +1,20 @@
+include ../cards-title/cards-title
+include ../../form-elements/text-field/text-field
+
+
+mixin enterCard()
+    .cards__item
+        .enter__items
+            .enter__item
+                +title('cards__title', 'Войти')
+                +inputField('', '', 'register__service--email text-field', '', 'email', 'Email')
+                +inputField('', '', 'register__service--password text-field', '', 'password', 'Пароль')
+
+            .enter__item
+                +longButton('enter__button--long long-button', 'войти', 'long-button__icon', 'arrow_forward')
+
+            .enter__item
+                .register__account
+                    .enter__text Нет аккаунта на Toxin?
+                    .enter__button
+                        +accountButton('rounded-button', 'создать')

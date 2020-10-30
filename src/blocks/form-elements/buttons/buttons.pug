@@ -1,0 +1,14 @@
+mixin button(btnClassName, title)
+    .form-elements__btn
+        button(class= btnClassName) #{title}
+
+mixin simpleButton(btnClassName, title)
+    .form-elements__btn
+        div(class= btnClassName) #{title}
+
+mixin longButton(btnClassName, title, iconClassName, iconName)
+    button(class= btnClassName) #{title}
+        i(class= iconClassName) #{iconName}
+
+mixin accountButton(buttonClassName, title)
+    button(class= buttonClassName) #{title}

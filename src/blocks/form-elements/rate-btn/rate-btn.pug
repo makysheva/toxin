@@ -1,0 +1,23 @@
+mixin rateButton(icon, iconBorder1, iconBorder2, iconWrapClassName)
+    if iconWrapClassName
+        div(class="form-elements__rate " +iconWrapClassName)
+            i(class="rating__icon") #{icon}
+            i(class="rating__icon") #{icon}
+            i(class="rating__icon") #{icon}
+            i(class="rating__icon") #{icon}
+            i(class="rating__icon") #{icon}
+
+    else if (iconBorder2)
+        .form-elements__rate
+            i(class="rating__icon") #{icon}
+            i(class="rating__icon") #{icon}
+            i(class="rating__icon") #{icon}
+            i(class="rating__icon") #{iconBorder1}
+            i(class="rating__icon") #{iconBorder2}
+    else
+        .form-elements__rate
+            i(class="rating__icon") #{icon}
+            i(class="rating__icon") #{icon}
+            i(class="rating__icon") #{icon}
+            i(class="rating__icon") #{icon}
+            i(class="rating__icon") #{iconBorder1}

@@ -1,0 +1,16 @@
+mixin datepickerLeft(inputClassName, placeholder, idInput, nameInput, iconClassName, icon)
+    if idInput
+        .datepicker--left
+            input(class= inputClassName, placeholder= placeholder, type="text", name= nameInput, id= idInput, readonly)
+            i(class= iconClassName) #{icon}
+
+    else
+        div(class= inputClassName)
+
+mixin datepickerRight(inputClassName, placeholder, idInput, nameInput, iconClassName, icon)
+    .datepicker--right
+        input(class= inputClassName, placeholder= placeholder, type="text", name= nameInput, id= idInput, readonly)
+        i(class= iconClassName) #{icon}
+
+mixin datepickerHere()
+    div(class="datepicker-here")

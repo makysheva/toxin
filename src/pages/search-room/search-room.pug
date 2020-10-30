@@ -1,0 +1,102 @@
+extends ../../base
+include ../../blocks/headers-footers/header/header
+include ../../blocks/headers-footers/menu/menu
+include ../../blocks/form-elements/buttons/buttons
+include ../../blocks/form-elements/calendar/calendar
+include ../../blocks/form-elements/dropdown/dropdown
+include ../../blocks/form-elements/text-field/text-field
+include ../../blocks/form-elements/slider/slider
+include ../../blocks/form-elements/checkbox/checkbox
+include ../../blocks/form-elements/rich-checkbox/rich-checkbox
+include ../../blocks/form-elements/expander/expander
+include ../../blocks/cards/gallery/gallery
+include ../../blocks/form-elements/pagination/pagination
+include ../../blocks/headers-footers/footer/footer
+
+
+block title
+    | Search Room
+
+block searchRoom-section
+    +header('headerRegister')
+
+    .container
+        .search-room
+            .search-room__sidebar
+                form(action="")
+                    +formElementsHeader('даты пребывания в отеле')
+                    .form-elements__filter-date
+                        input(class="text-field--filter datepicker-here" data-range="true" data-multiple-dates-separator=" - " type="text" placeholder="ДД.ММ.ГГГГ")
+                        i(class="material-icons--filter") expand_more
+
+                    .search-room__dropdown
+                        +dropdownCard('гости', '3 гостя, 1 младенец ', 'взрослые', 'дети', 'младенцы', '')
+
+                    .search-room__slider
+                        +sliderCard('диапазон цены')
+                        .slider__footer Стоимость за сутки пребывания в номере
+
+                    .search-room__checkbox
+                        +checkboxCard()
+
+                    .search-room__rich-checkbox
+                        +richCheckbox('mark-hall', 'checkbox-hall', 'Широкий коридор', 'checkbox-hall', 'hall', 'Ширина коридоров в номере не менее 91 см.')
+                        +richCheckbox('mark-specialist', 'checkbox-specialist', 'Помощник для инвалидов', 'checkbox-specialist', 'specialist', 'На 1 этаже вас встретит специалист и проводит до номера.')
+
+                    .search-room__dropdown
+                        +dropdownCard('гости', '3 гостя, 1 младенец ', 'взрослые', 'дети', 'младенцы', '')
+
+                    .search-room__expander
+                        +expanderCard('дополнительные удобства')
+
+            .search-room__content
+                .search-room__title Номера, которые мы для вас подобрали
+                .search-room__cards
+                    .search-room__card
+                        +gallery('gallery-1.png', 'true', '№', '888', 'люкс', '9 990₽', ' в сутки', 'star', '', 'cards__rate form-elements__rate--right', '145', 'Отзывов')
+                        +gallery('gallery-2.png', 'false', '№', '840', '', '9 990₽', ' в сутки', 'star', 'star_border', '', '', '65', 'Отзывов')
+                        +gallery('gallery-3.png', 'false', '№', '980', 'люкс', '8 500₽', ' в сутки', 'star', 'star_border', 'star_border', '', '35', 'Отзывов')
+                        +gallery('gallery-4.png', 'false', '№', '856', '', '7 300₽', ' в сутки', 'star', '', '', '19', 'Отзывов')
+                        +gallery('gallery-5.png', 'false', '№', '740', '', '6 000₽', ' в сутки', 'star', 'star_border', '', '', '44', 'Отзывов')
+                        +gallery('gallery-6.png', 'false', '№', '982', '', '5 800₽', ' в сутки', 'star', 'star_border', 'star_border', '', '56', 'Отзывов')
+                        +gallery('gallery-7.png', 'false', '№', '678', '', '5 500₽', ' в сутки', 'star', '', '', '45', 'Отзывов')
+                        +gallery('gallery-8.png', 'false', '№', '450', '', '5 300₽', ' в сутки', 'star', 'star_border', '', '', '39', 'Отзывов')
+                        +gallery('gallery-9.png', 'false', '№', '350', '', '5 000₽', ' в сутки', 'star', 'star_border', 'star_border', '', '77', 'Отзывов')
+                        +gallery('gallery-10.png', 'false', '№', '666', '', '5 000₽', ' в сутки', 'star', '', '', '25', 'Отзывов')
+                        +gallery('gallery-11.png', 'false', '№', '444', '', '5 000₽', ' в сутки', 'star', 'star_border', 'star_border', '', '15', 'Отзывов')
+                        +gallery('gallery-12.png', 'false', '№', '352', '', '5 000₽', ' в сутки', 'star', 'star_border', 'star_border', '', '55', 'Отзывов')
+
+            .search-room__pagination
+                +paginationCard()
+
+
+        +footer({
+            navigation: [
+                {
+                    title: "Навигация",
+                    links: [
+                    { url: "/mock-address", text: "О нас" },
+                    { url: "/mock-address", text: "Новости" },
+                    { url: "/mock-address", text: "Служба поддержки" },
+                    { url: "/mock-address", text: "Услуги" },
+                    ]
+                },
+                {
+                    title: "О нас",
+                    links: [
+                    { url: "/mock-address", text: "О сервисе" },
+                    { url: "/mock-address", text: "Наша команда" },
+                    { url: "/mock-address", text: "Вакансии" },
+                    { url: "/mock-address", text: "Инвесторы" },
+                    ]
+                },
+                {
+                    title: "Служба поддержки",
+                    links: [
+                    { url: "/mock-address", text: "Соглашения" },
+                    { url: "/mock-address", text: "Сообщества" },
+                    { url: "/mock-address", text: "Связь с нами" },
+                    ]
+                },
+            ]
+        })

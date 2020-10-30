@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #e5e5e5;
+}
+
+.container{
+    max-width: 1160px;
+    width: 100%;
+    margin: auto;
+}
+
+.logo{
+    padding: 30px 0px 62px 30px;
+}
+
+.logo-main{
+    padding-right: 12px;
+}
+
+//- header для регистрации
+.header__item--register{
+    background-color: #fff;
+    box-shadow: 0px 10px 20px rgba(31,32,65,0.05);
+    margin-bottom: 40px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+}
+
+.header__menu--register{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.logo-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header__button{
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: inherit;
+    position: relative;
+    top: 14px;
+}

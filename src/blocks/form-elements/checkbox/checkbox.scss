@@ -1,0 +1,67 @@
+// Checkbox
+.form-elements__checkbox{
+    display: flex;
+    max-width: 260px;
+    width: 100%;
+}
+.checkboxs{
+    margin-top: 17px;
+}
+
+.checkbox{
+    width: 0;
+}
+
+.checkbox-descr{
+    max-width: 222px;
+    width: 100%;
+    font-family: 'Montserrat-Regular', 'OpenSans-Regular', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
+}
+
+.checkbox__marks{
+    width: 24px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+    display: block;
+    margin-right: 10px;
+}
+
+.checkbox__marks--long-text{
+    width: 20px;
+}
+
+.checkbox__mark{
+    font-size: 13px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: none;
+    margin: 2px;
+    text-align: center;
+}
+
+.checkbox__mark--checked{
+    display: block;
+}
+
+.form-elements__checkbox{
+    margin-bottom: 13px;
+}
+
+.form-elements__checkbox:last-child{
+    margin-bottom: 0;
+}
+
+.js-checkbox{
+    display: flex;
+    flex-direction: row;
+}

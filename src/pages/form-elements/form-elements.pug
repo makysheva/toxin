@@ -1,0 +1,171 @@
+extends ../../base
+include ../../blocks/form-elements/dropdown/dropdown
+include ../../blocks/form-elements/text-field/text-field
+include ../../blocks/form-elements/calendar/calendar
+include ../../blocks/form-elements/expander/expander
+include ../../blocks/form-elements/additions/additions
+include ../../blocks/form-elements/checkbox/checkbox
+include ../../blocks/form-elements/radio-btn/radio-btn
+include ../../blocks/form-elements/toggle/toggle
+include ../../blocks/form-elements/like-btn/like-btn
+include ../../blocks/form-elements/rate-btn/rate-btn
+include ../../blocks/form-elements/rich-checkbox/rich-checkbox
+include ../../blocks/form-elements/slider/slider
+include ../../blocks/form-elements/buttons/buttons
+include ../../blocks/form-elements/pagination/pagination
+include ../../blocks/form-elements/bullet-list/bullet-list
+include ../../blocks/form-elements/feedback/feedback
+
+block title
+    | Form Elements
+
+block main
+    .logo-wrapper
+        include ../../blocks/logo/logo-grey
+
+block form-section
+    .container
+        .form-elements__wrapper
+            .form-elements.form-elements--left
+                .form-elements-item--default
+                    form(action="")
+                        +textField('text field', 'default')
+                        +inputField('', '', 'text-field', 'default', 'email', 'Email')
+                .form-elements-item--hover
+                    form(action="")
+                        +textField('text field', 'hover')
+                        +inputField('', '', 'text-field', 'hover', 'email', 'Email')
+
+                .form-elements-item
+                    +dropdownCard('dropdown', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы', '', '', '')
+
+                .form-elements-item
+                    .form-elements__dropdown
+                        form(action="")
+                            +formElementsHeader('masked text field')
+                            +inputField('form-elements__input', '--masked', 'text-field', '', 'text', 'ДД.ММ.ГГГГ')
+
+                .form-elements-item
+                    .form-elements__datepicker
+                        .datepicker-wrapper
+                            +formElementsHeader('date Dropdown')
+                            .form-elements__input--datepicker
+                                +datepickerLeft('text-field--datepicker text-field-datepicker--left', 'ДД.ММ.ГГГГ', 'startDate', 'start', 'material-icons--left-datepicker', 'expand_more')
+
+                        .datepicker-wrapper--right
+                            +formElementsHeader('date Dropdown')
+                            .form-elements__input--datepicker
+                                +datepickerRight('text-field--datepicker text-field-datepicker--right', 'ДД.ММ.ГГГГ', 'endDate', 'end', 'material-icons--left-datepicker', 'expand_more')
+
+                .form-elements-item
+                    .form-elements__filter-date-wrapper
+                        form(action="")
+                            +formElementsHeader('filter date dropdown')
+                            .form-elements__filter-date
+                               input(class="text-field--filter datepicker-here" data-range="true" data-multiple-dates-separator=" - " type="text" placeholder="ДД.ММ.ГГГГ")
+                               i(class="material-icons--filter") expand_more
+
+                .form-elements-item
+                    .form-elements__email-wrapper
+                        form(action="" method="get")
+                            +formElementsHeader('subscription text field')
+                            .form-elements__email-field
+                                    input(class="text-field--email" type="text" placeholder="Email")
+                                    i(class="material-icons--email subscription__button") arrow_forward
+
+                .form-elements-item
+                    +dropdownCard('dropdown', '2 спальни, 2 кровати', '', '', '', 'Спальни', 'Кровати', 'Ванные комнаты')
+
+                .form-elements-item
+                    +dropdownCard('dropdown', '2 спальни, 2 кровати', '', '', '', 'Спальни', 'Кровати', 'Ванные комнаты')
+
+                .form-elements-item
+                    .form-elements__expander
+                        form(action="")
+                            +expanderCard('Expandable checkbox list', 'expander__list_hided')
+                            +expanderCard('Expandable checkbox list', '')
+
+                .form-elements-item
+                    .form-elements__additions
+                        +additions('tag_faces', 'Комфорт', 'Шумопоглощающие стены')
+                        +additions('location_city', 'Удобство', 'Окно в каждой из спален')
+
+            .form-elements.form-elements--middle
+                .form-elements-item
+                    +checkboxCard()
+
+                .form-elements-item
+                    form(action="")
+                        +formElementsHeader('Radio Buttons')
+                        .form-elements__radio-wrapper
+                            +radioButton('male-btn', 'marker__descr--female', 'Мужской', 'male-btn', 'checked')
+                            +radioButton('female-btn', 'marker__descr--male', 'Женский', 'female-btn', '')
+
+                .form-elements-item
+                    form(action="")
+                        +formElementsHeader('Toggle')
+                        .form-elements__toggle-wrapper
+                            +toggle('toggle-btn--active', 'Получать спецпредложения', 'toggle-btn--active', 'checked')
+                            +toggle('toggle-btn--disabled', 'Получать спецпредложения', 'toggle-btn--disabled', '')
+
+                .form-elements-item
+                    form(action="")
+                        +formElementsHeader('like button')
+                        .form-elements__like-wrapper
+                            .form-elements__like
+                                +likeButton('2', 'favorite_border', '', '')
+                                +likeButton('12', 'favorite', 'like--active', 'like__icon--active')
+
+                .form-elements-item
+                    form(action="")
+                        +formElementsHeader('rate button')
+                        .form-elements__rate-wrapper
+                            +rateButton('star', 'star_border', '', '')
+                            +rateButton('star', '', '', 'form-elements__rate--right')
+
+                .form-elements-item
+                    +dropdownCard('dropdown', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы', '', '', '')
+
+                .form-elements-item
+                    +formElementsHeader('Rich Checkbox Buttons')
+                    .form-elements__rich-checkbox
+                        +richCheckbox('mark-hall', 'checkbox-hall', 'Широкий коридор', 'checkbox-hall', 'hall', 'Ширина коридоров в номере не менее 91 см.')
+                        +richCheckbox('mark-specialist', 'checkbox-specialist', 'Помощник для инвалидов', 'checkbox-specialist', 'specialist', 'На 1 этаже вас встретит специалист и проводит до номера.')
+
+                //- здесь нужно будет продолжить среднюю часть верстки
+
+            .form-elements.form-elements--right
+                .form-elements-item
+                    +sliderCard('Range Slider')
+
+                .form-elements-item
+                    form(action="")
+                        +formElementsHeader('buttons')
+                        .form-elements__buttons
+                            +button('button', 'Click me')
+                            +button('button button_disabled', 'Click me')
+                            +button('rounded-button', 'Click me')
+                            +button('rounded-button rounded-button_disabled', 'Click me')
+                            +simpleButton('simple-button', 'Click me')
+                            +simpleButton('simple-button simple-button_disabled', 'Click me')
+                        .form-elements__btn
+                            +longButton('long-button', 'Перейти к оплате', 'long-button__icon', 'arrow_forward')
+
+                .form-elements-item
+                    +formElementsHeader('pagination')
+                    .form-elements__pagination
+                        +paginationCard()
+
+                .form-elements-item
+                    +dropdownCard('dropdown', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы', '', '', '')
+
+                .form-elements-item
+                    .form-elements__bullet
+                        form(action="")
+                            +formElementsHeader('bullet list')
+                            +bulletCard('Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00')
+
+            .form-elements--bottom
+                .form-elements-item
+                    .form-elements__feedback
+                        +feedback('Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')

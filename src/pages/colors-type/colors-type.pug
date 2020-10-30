@@ -1,0 +1,27 @@
+extends ../../base
+include ../../blocks/colors-type/colors-type
+
+block title
+    | Colors and Type
+
+block main
+    .logo-wrapper
+        include ../../blocks/logo/logo-grey
+
+block rectangles-section
+    .container
+        .rectangles__wrapper
+            .rectangles
+                +rectangleInfo('dark', 'Dark Shade 100% #1F2041')
+                +rectangleInfo('dimgrey', 'Dark Shade 75% #1F2041')
+                +rectangleInfo('silver', 'Dark Shade 50% #1F2041')
+                +rectangleInfo('lightgrey', 'Dark Shade 25% #1F2041')
+                +rectangleInfo('smokywhite', 'Dark Shade 5% #1F2041')
+                +rectangleInfo('purple', 'Purple #BC9CFF')
+                +rectangleInfo('green', 'Green #6FCF9')
+
+            .widgets
+                +widgetsInfo('h1', 'H1', 'h1', 'This one is the sub-section or widget title')
+                +widgetsInfo('h2', 'H2', 'h2', 'Next one is the item title inside widgets')
+                +widgetsInfo('h3', 'H3', 'h3', 'This is a label or CTA text')
+                +widgetsInfo('body', 'Body', 'body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')

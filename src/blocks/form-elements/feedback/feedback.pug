@@ -1,0 +1,19 @@
+include ../like-btn/like-btn
+
+mixin feedback(name, period, comment)
+    article(class="feedback")
+        div(class="feedback__wrapper")
+            div(class="feedback__avatar-wrapper")
+                img(class="feedback__avatar" src="assets/images/avatar.jpg" alt="user avatar")
+            div(class="feedback__author-wrapper")
+                div(class="feedback__author") #{name}
+                div(class="feedback__date") #{period}
+        div(class="feedback__wrapper")
+            if (name === 'Мурад Сарафанов')
+                div(class="feedback__like")
+                    +likeButton('12', 'favorite', 'like--active', 'like__icon--active')
+                div(class="feedback__text") #{comment}
+            else
+                div(class="feedback__like")
+                    +likeButton('2', 'favorite_border', '', '')
+                div(class="feedback__text") #{comment}

@@ -1,0 +1,10 @@
+mixin invoice(serviceClassName, serviceTitle, sum)
+    div(class="invoice__row")
+        div(class= serviceClassName) #{serviceTitle}
+        div(class="invoice__sum") #{sum}
+
+mixin invoiceTotal(totalClassName, title, headerClassName, sum)
+    div(class= totalClassName)
+        h2(class= headerClassName) #{title}
+        div(class="invoice__line")
+        h2(class= headerClassName) #{sum}

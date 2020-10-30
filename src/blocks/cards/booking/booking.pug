@@ -1,0 +1,62 @@
+include ../../form-elements/text-field/text-field
+include ../cards-title/cards-title
+include ../../form-elements/dropdown/dropdown
+include ../../form-elements/calendar/calendar
+include ../../form-elements/buttons/buttons
+include ../invoice/invoice
+
+mixin bookingCard()
+    .cards__item
+        .booking__items
+            .booking__item
+                +booking('№', '888', 'люкс', '9 990₽', ' в сутки')
+
+            .booking__item
+                form(class="find-apartments__form" action="/mock-address" method="get")
+                    .datepicker-field
+                        .datepicker-field--left
+                            +subtitle('datepicker-field__title', 'Прибытие')
+                            +datepickerLeft('text-field--datepicker text-field-datepicker--left', 'ДД.ММ.ГГГГ', 'startDate', 'start', 'material-icons--left-datepicker', 'expand_more')
+                        .datepicker-field--right
+                            +subtitle('datepicker-field__title', 'Выезд')
+                            +datepickerRight('text-field--datepicker text-field-datepicker--right', 'ДД.ММ.ГГГГ', 'endDate', 'end', 'material-icons--left-datepicker', 'expand_more')
+
+            .booking__item
+                .find-apartments__item
+                    +subtitle('find-apartments__subtitle', 'Гости')
+                .find-apartments__dropdown
+                    form(action="")
+                        .form-elements__input--dropdown
+                            +dropdown('3 гостя')
+
+                        div(class="dropdown__menu")
+                            +dropdownControls('item-adult', 'Взрослые', '-', '0', '+')
+                            +dropdownControls('item-children', 'Дети', '-', '0', '+')
+                            +dropdownControls('item-babies', 'Младенцы', '-', '0', '+')
+
+                            div(class="dropdown__buttons" data-id="item-btn")
+                                button(class="clear-btn") Очистить
+                                button(class="apply-btn") Применить
+
+            .booking__item
+                .invoice__item
+                    .invoice
+                        +invoice('invoice__service', '9 990₽ х 4 суток', '39 960₽')
+                        +invoice('invoice__service invoice__service_with-icon', 'Сбор за услуги: скидка 2 179₽', '0₽')
+                        +invoice('invoice__service  invoice__service_with-icon', 'Сбор за дополнительные услуги', '300₽')
+                        +invoiceTotal('invoice__row invoice__row_font_large', 'Итого', 'invoice__block', '38 081₽')
+
+
+            .booking__item
+                +longButton('booking__button--long long-button', 'забронировать', 'long-button__icon', 'arrow_forward')
+
+
+mixin booking(number, numberLarge, text, price, priceText)
+    .booking__item--apartment
+        .apartment__info
+            span.apartment__number #{number}
+            span.apartment__number.apartment__number--large  #{numberLarge}
+            span.apartment__text  #{text}
+        .price
+            span.price__number #{price}
+            span.price__text #{priceText}

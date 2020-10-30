@@ -1,0 +1,36 @@
+include ../footer-nav/footer-nav
+include ../../form-elements/text-field/text-field
+include ../socials/socials
+
+mixin footer({navigation})
+    footer.footer
+        .footer__wrapper
+            .footer__logo
+                .logo-wrapper
+                    include ../../logo/logo-main
+                .footer__text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+
+            .footer__items
+                each element in navigation
+                    section.footer__nav
+                        +navigation(element.title)
+                        .link__container
+                            each link in element.links
+                                +link(link.text)
+
+            .footer__subscription
+                .subscription__title Подписка
+                .subscription__text Получайте специальные предложения и новости сервиса
+                .subscription__form
+                    form(class="footer__form" action="/mock-address" method="get")
+                        .form-elements__email-field
+                            +inputField('', '', 'text-field--email', '', 'email', 'Email')
+                            i(class="material-icons--email subscription__button") arrow_forward
+
+
+        .footer__container
+            .footer__line
+            .footer__copy
+                p(class="footer__paragraph") Copyright © 2018 Toxin UI Kit. All rights reserved.
+                +socials()
+

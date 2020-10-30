@@ -1,0 +1,26 @@
+include ../booking/booking
+include ../../form-elements/rate-btn/rate-btn
+
+mixin gallery(image, arrows= true, number, numberLarge, text, price, priceText, icon, iconBorder1, iconBorder2, iconWrapClassName, countComments, comments)
+    .gallery
+        .gallery__image
+            img(src=require(`assets/img/${image}`), alt="apartment photo")
+            if (arrows)
+                .gallery__left-arrow.gallery__arrow
+                    i(class="gallery__icon material-icons") keyboard_arrow_left
+                .gallery__right-arrow.gallery__arrow
+                    i(class="gallery__icon material-icons") keyboard_arrow_left
+                .gallery__point-container
+                    .gallery__point.gallery__point_filled
+                    .gallery__point
+                    .gallery__point
+                    .gallery__point
+
+        .gallery__body
+            .gallery__info
+                +booking(number, numberLarge, text, price, priceText)
+            .gallery__rating
+                +rateButton(icon, iconBorder1, iconBorder2, iconWrapClassName)
+                .gallery__rating--comments
+                    .gallery__rating--text.gallery__rating--bold #{countComments}
+                    .gallery__rating--descr  #{comments}

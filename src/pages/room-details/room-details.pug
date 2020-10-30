@@ -1,0 +1,97 @@
+extends ../../base
+include ../../blocks/headers-footers/header/header
+include ../../blocks/headers-footers/menu/menu
+include ../../blocks/form-elements/buttons/buttons
+include ../../blocks/form-elements/text-field/text-field
+include ../../blocks/form-elements/additions/additions
+include ../../blocks/form-elements/feedback/feedback
+include ../../blocks/cards/booking/booking
+include ../../blocks/form-elements/bullet-list/bullet-list
+include ../../blocks/headers-footers/footer/footer
+
+block title
+    | Room Details
+
+block roomDetails-section
+    +header('headerRegister')
+
+    .hero-gallery
+        .hero-gallery__left
+            img(class="hero-gallery__img--main" src=require('assets/img/room-1.png'), alt="room-1")
+        .hero-gallery__right
+            img(class="hero-gallery__img--right" src=require('assets/img/room-2.png'), alt="room-2")
+            img(class="hero-gallery__img--right" src=require('assets/img/room-3.png'), class="hero-gallery--small", alt="room-3")
+
+    .container
+        .room-details
+            .room-details__wrapper
+                .room-details__additions
+                    +formElementsHeader('Сведения о номере')
+                    +additions('tag_faces', 'Комфорт', 'Шумопоглощающие стены')
+                    +additions('location_city', 'Удобство', 'Окно в каждой из спален')
+                    +additions('whatshot', 'Уют', 'Номер оснащён камином')
+
+                .room-details__chart
+                    +formElementsHeader('Впечатления от номера')
+
+                    .chart__wrapper
+                        .chart
+                            canvas(id="myChart")
+                            span.chart__text 260 голосов
+
+                        .room-details__list
+                            ul(class="bullet")
+                                li(class="bullet__element bullet__element--yellow") Великолепно
+                                li(class="bullet__element bullet__element--green") Хорошо
+                                li(class="bullet__element bullet__element--purple") Удовлетворительно
+                                li(class="bullet__element bullet__element--grey") Разочарован
+
+            .room-details__booking
+                +bookingCard()
+
+            .room-details__container
+                .room-details__comments
+                    .room-details__title
+                        h2 Отзывы посетителей номера
+                    .room-details__subtitle  2 отзыва
+                .room-details__feedback
+                    +feedback('Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+                    +feedback('Патрисия Стёклышкова', 'Неделю назад', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
+
+
+            .room-details__bullet
+                .room-details__title Правила
+                    +bulletCard('Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00')
+                .room-details__title Отмена
+                    .room-details__descr Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+
+    +footer({
+        navigation: [
+            {
+                title: "Навигация",
+                links: [
+                { url: "/mock-address", text: "О нас" },
+                { url: "/mock-address", text: "Новости" },
+                { url: "/mock-address", text: "Служба поддержки" },
+                { url: "/mock-address", text: "Услуги" },
+                ]
+            },
+            {
+                title: "О нас",
+                links: [
+                { url: "/mock-address", text: "О сервисе" },
+                { url: "/mock-address", text: "Наша команда" },
+                { url: "/mock-address", text: "Вакансии" },
+                { url: "/mock-address", text: "Инвесторы" },
+                ]
+            },
+            {
+                title: "Служба поддержки",
+                links: [
+                { url: "/mock-address", text: "Соглашения" },
+                { url: "/mock-address", text: "Сообщества" },
+                { url: "/mock-address", text: "Связь с нами" },
+                ]
+            },
+        ]
+    })

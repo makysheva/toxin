@@ -1,0 +1,38 @@
+.additions__wrapper{
+    display: flex;
+    flex-direction: row;
+    margin-top: 26px;
+}
+
+.additions {
+    line-height: 1.716em;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: rgba(31,32,65,0.1);
+    padding: 0 2.5em 1.43em 1.14em;
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+}
+
+.additions__title {
+    font-family: 'Montserrat-Bold', 'OpenSans-Bold', sans-serif;
+    font-weight: bolder;
+}
+
+.additions__icon {
+    font-family: 'Material Icons';
+    font-size: 2.25em;
+    line-height: 0.85em;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icon__wrap{
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: rgba(31, 32, 65, 0.1);
+}

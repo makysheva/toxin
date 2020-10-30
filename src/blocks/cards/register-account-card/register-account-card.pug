@@ -1,0 +1,36 @@
+include ../cards-title/cards-title
+include ../../form-elements/text-field/text-field
+include ../../form-elements/radio-btn/radio-btn
+include ../../form-elements/toggle/toggle
+include ../invoice/invoice
+include ../booking/booking
+
+mixin registerAccountCard()
+    .cards__item
+        .register__items
+            .register
+                +title('cards__title', 'Регистрация аккаунта')
+                +inputField('', '', 'cards__field--name text-field', '', 'text', 'Имя')
+                +inputField('', '', 'cards__field--surname text-field', '', 'text', 'Фамилия')
+
+                .register__gender
+                    +radioButton('male-btn', 'marker__descr--female', 'Мужской', 'male-btn', 'checked')
+                    +radioButton('female-btn', 'marker__descr--male', 'Женский', 'female-btn', '')
+
+                .register__birthday
+                    +subtitle('datepicker-field__title', 'дата рождения')
+                    +inputField('', '', 'register__birthday--field text-field', '', 'text', 'ДД.ММ.ГГГГ')
+
+                .register__service
+                    +subtitle('datepicker-field__title', 'данные для входа в сервис')
+                    +inputField('', '', 'register__service--email text-field', '', 'email', 'Email')
+                    +inputField('', '', 'register__service--password text-field', '', 'password', 'Пароль')
+                    +toggle('register__service--toggle', 'Получать спецпредложения', 'register__service--toggle', '')
+
+                .register__button
+                    +longButton('register__button--long long-button', 'перейти к оплате', 'long-button__icon', 'arrow_forward')
+
+                .register__account
+                    .account__text Уже есть аккаунт на Toxin
+                    .account__button
+                        +accountButton('rounded-button', 'Войти')
